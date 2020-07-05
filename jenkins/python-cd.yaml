@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python-cd
+  labels:
+    app: app-cd
+spec:
+  serviceAccountName: helm
+  containers:
+  - image: python
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+    name: cd
+  restartPolicy: Always
