@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app-cd
 spec:
-  serviceAccountName: helm
+  serviceAccountName: new-ns
   containers:
   - image: python
     command:
